@@ -73,7 +73,13 @@ PG_FUNCTION_INFO_V1(varchar_datetimeoffset);
 PG_FUNCTION_INFO_V1(get_datetimeoffset_tzoffset_internal);
 PG_FUNCTION_INFO_V1(dateadd_datetimeoffset);
 
-#define DTK_NANO 32
+/*
+ * Token field definitions for time parsing and decoding.
+ *
+ * Note: Values 0 to 37 are already used in datetime.h.
+ * This token (DTK_NANO) is specific to T-SQL and is defined here.
+ */
+#define DTK_NANO 100
 
 /* datetimeoffset_in_str()
  * Convert a string to internal form.

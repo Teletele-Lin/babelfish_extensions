@@ -4062,7 +4062,9 @@ datediff_arg:
 			| DAY_P									{ $$ = "day"; }
 			| TSQL_DD								{ $$ = "day"; }
 			| TSQL_D								{ $$ = "day"; }
-			| TSQL_W								{ $$ = "day"; }
+			| TSQL_W								{ $$ = "dow"; }
+			| TSQL_WEEKDAY							{ $$ = "dow"; }
+			| TSQL_DW								{ $$ = "dow"; }
 			| TSQL_WEEK								{ $$ = "week"; }
 			| TSQL_WK								{ $$ = "week"; }
 			| TSQL_WW								{ $$ = "week"; }
